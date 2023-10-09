@@ -1,8 +1,1 @@
-import tailwindcss from 'tailwindcss';
-import autoprefixer from 'autoprefixer';
-
-const config = {
-	plugins: [tailwindcss(), autoprefixer]
-};
-
-module.exports = config;
+module.exports = ({ env }) => ({ plugins: [require('tailwindcss')(), require('autoprefixer')()] });

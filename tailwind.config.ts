@@ -9,7 +9,17 @@ const config = {
 		join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
 	],
 	theme: {
-		extend: {}
+		extend: {
+			fontFamily: {
+				sans: [
+					'Inter var, sans-serif',
+					{
+						fontFeatureSettings: '"cv11", "ss01"',
+						fontVariationSettings: '"opsz" 32'
+					}
+				]
+			}
+		}
 	},
 	plugins: [skeleton]
 } satisfies Config;
