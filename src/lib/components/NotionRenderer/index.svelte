@@ -7,17 +7,17 @@
 
 {#each blocks as block}
 	{#if block.type === 'header'}
-		<h1>{block.properties.title[0][0]}</h1>
+		<h1 class="title !text-3xl">{block.properties.title[0][0]}</h1>
 	{:else if block.type === 'page'}
-		<h2>{block.properties.title[0][0]}</h2>
+		<h1 class="title !text-3xl">{block.properties.title[0][0]}</h1>
 	{:else if block.type === 'sub_header'}
-		<h2>{block.properties.title[0][0]}</h2>
+		<h2 class="title !text-2xl">{block.properties.title[0][0]}</h2>
 	{:else if block.type === 'sub_sub_header'}
-		<h3>{block.properties.title[0][0]}</h3>
+		<h3 class="title !text-xl">{block.properties.title[0][0]}</h3>
 	{:else if block.type === 'text'}
 		<Text {block} />
 	{:else if block.type === 'divider'}
-		<hr />
+		<hr class="w-full my-2 mx-0 p-0 border-t-0 border-gray-500" />
 	{:else if block.type === 'quote'}
 		<blockquote class="blockquote">
 			{block.properties.title[0][0]}
@@ -37,5 +37,13 @@
 		line-height: 1.5rem;
 		font-style: italic;
 		color: rgba(var(--theme-font-color-base));
+	}
+
+	.title {
+		width: 100%;
+		font-size: 2.5em;
+		font-weight: 650;
+		margin: 20px auto;
+		line-height: 1.2;
 	}
 </style>
